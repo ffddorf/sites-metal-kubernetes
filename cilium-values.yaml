@@ -1,0 +1,24 @@
+routingMode: native
+autoDirectNodeRoutes: true
+ipv6:
+  enabled: true
+ipam:
+  operator:
+    clusterPoolIPv4MaskSize: 20
+    clusterPoolIPv4PodCIDRList: 10.42.0.0/16
+    clusterPoolIPv6MaskSize: 64
+    clusterPoolIPv6PodCIDRList: 2001:678:b7c:600::/56
+ipv4NativeRoutingCIDR: 10.42.0.0/16
+ipv6NativeRoutingCIDR: 2001:678:b7c:600::/56
+kubeProxyReplacement: true
+installNoConntrackIptablesRules: true
+l7Proxy: false
+bpf:
+  masquerade: true
+prometheus:
+  enabled: true
+  port: 9095
+k8sServiceHost: fd00:7::2e76:8aff:fe5d:18b0
+k8sServicePort: 6443
+operator:
+  replicas: 1
